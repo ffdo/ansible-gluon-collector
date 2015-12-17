@@ -1,0 +1,10 @@
+[Unit]
+Description=gluon-collector
+
+[Service]
+ExecStart={{gluon_collector_base_path}}/gluon-collector
+WorkingDirectory={{gluon_collector_base_path}}
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

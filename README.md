@@ -1,4 +1,4 @@
-gluon-collector
+gluon-collector [![Build Status](https://travis-ci.org/ffdo/ansible-gluon-collector.svg?branch=master)](https://travis-ci.org/ffdo/ansible-gluon-collector)
 =========
 
 This role configures and install the gluon-collector service.

@@ -17,7 +17,7 @@ install:
 
 script:
     - ansible --version
-    - 'ansible --syntax-check --list-tasks -i "localhost," test/application/gluon-collector.yml'
+    - 'ansible-playbook --syntax-check --list-tasks -i "localhost," test/application/gluon-collector.yml'
 
 
 after_success:

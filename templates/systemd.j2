@@ -5,6 +5,7 @@ Description=gluon-collector
 ExecStart={{gluon_collector_base_path}}/gluon-collector
 WorkingDirectory={{gluon_collector_base_path}}
 Restart=always
+User={{gluon_collector_user}}
 
 [Install]
 WantedBy=multi-user.target

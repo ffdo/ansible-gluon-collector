@@ -2,6 +2,9 @@
 language: python
 python: "2.7"
 
+env:
+- ANSIBLE_CONFIG=test/ansible.cfg
+
 before_install:
   # Make sure everything's up to date.
   - sudo apt-get update -qq
@@ -13,10 +16,8 @@ install:
 
 
 script:
-    #- cd test
     - ansible --version
-    - bundle install
-    - KITCHEN_YAML=.kitchen.travis.yml bundle exec kitchen test travis
+    - 'ansible --syntax-check --list-tasks -i "localhost," test/application/gluon-collector.yml'
 
 
 after_success:
